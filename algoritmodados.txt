@@ -1,0 +1,45 @@
+algoritmo
+   declare X [0:99] numérico
+   declare I, N, P, MEDIA, MEDAPARA, DESVIO numérico
+   declare QTD_TERMOS, B numérico
+   leia N 
+   leia P 
+   MEDIA <-- 0
+   MEDAPARA <-- 0
+   DESVIO <-- 0
+   QTD_TERMOS <-- 0
+   I <-- 0
+   repita
+      se I >= N 
+         então interrompa
+      fim-se
+      leia X[I]
+      MEDIA <-- MEDIA + X[I]
+      I <-- I + 1
+   fim-repita
+   MEDIA <-- MEDIA / I
+   I <-- P
+   repita
+      se I >= N - P
+         então interrompa
+      fim-se
+      MEDAPARA <-- MEDAPARA + X[I]
+      I <-- I + 1
+      QTD_TERMOS <-- QTD_TERMOS + 1
+   fim-repita
+   MEDAPARA <-- MEDAPARA / QTD_TERMOS
+   I <-- 0
+   repita
+      se I >= N 
+         então interrompa
+      fim-se
+      B <-- X[I] - MEDIA
+      DESVIO <-- DESVIO + (B * B)
+      I <-- I + 1
+   fim-repita
+   DESVIO <-- sqrt(DESVIO)
+   DESVIO <-- DESVIO / N 
+   escreva("A média entre os valores do vetor é", MEDIA)
+   escreva("A média aparada entre os valores do vetor é", MEDAPARA)
+   escreva("A desvio padrão entre os valores do vetor é", DESVIO)
+fim-algoritmo
