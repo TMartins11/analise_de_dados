@@ -3,7 +3,7 @@
  * 
  * Prof. Luiz Eduardo da Silva
  * 
- * Aluno: Thiago Martins da Silva - 2024.1,08.023
+ * Aluno: Thiago Martins
  */
 
 #include <stdio.h>
